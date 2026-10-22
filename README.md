@@ -1,6 +1,6 @@
 # Enlaces fijos de RM Agroinversiones
 
-- /curso/ → cursos (Hotmart; luego página de ventas)
+- /curso/ → página de ventas de los cursos (pasa ?src= a Hotmart como pagina-<src>)
 - /app/ → RM Postura
 - /calculadora/ → Calculadora Avícola RM
 
