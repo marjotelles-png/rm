@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>App RM Postura · RM Agroinversiones</title>
+<meta name="robots" content="noindex">
+<style>body{margin:0;min-height:100vh;display:grid;place-items:center;background:#0B0B0B;color:#FBF6EC;font:600 17px/1.4 system-ui,sans-serif;text-align:center}a{color:#FCC808}</style>
+<script>
+// Enlace fijo de RM: el destino se cambia aquí sin tocar los videos ni las publicaciones
+(function () {
+  var destino = 'https://rm-postura.expo.app/';
+  var q = new URLSearchParams(location.search);
+  var src = q.get('src') || 'rm';
+  var url = new URL(destino);
+  if (!url.searchParams.has('src')) url.searchParams.set('src', src);
+  location.replace(url.toString());
+})();
+</script>
+</head>
+<body><p>Abriendo App RM Postura…<br><a href="https://rm-postura.expo.app/">Toca aquí si no se abre</a></p></body>
+</html>
