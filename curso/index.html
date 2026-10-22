@@ -198,6 +198,11 @@ details.temario li em { font-style: normal; color: #7A6F55; font-variant-numeric
 footer { border-top: 1px solid var(--linea); padding-block: 28px; color: var(--texto-2); font-size: 13px; }
 footer .envoltura { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px; }
 
+[hidden] { display: none !important; }
+.franja { background: var(--oro); color: #14110A; font-weight: 700; font-size: 14.5px; padding-block: 10px; }
+.franja a { font-weight: 800; }
+.regalo-app { display: inline-block; background: rgba(252, 200, 8, .14); border: 1px solid var(--oro); color: var(--oro); border-radius: 12px; padding: 8px 12px; font-size: 13.5px; font-weight: 700; }
+
 /* Botón fijo en celular */
 .fijo { display: none; }
 
@@ -241,6 +246,8 @@ fbq('track','ViewContent',{content_name:'Combo Granja Completa',content_category
   </div>
 </header>
 
+<div class="franja js-app" hidden><div class="envoltura">🎁 Lanzamiento de la app RM Postura: el combo a <b>US$37</b> con <b>2 meses de RM Postura Pro</b> de regalo, solo hasta el viernes 31 de octubre. <a href="#precio">Ver precio</a></div></div>
+
 <main id="inicio">
   <section class="portada">
     <div class="envoltura">
@@ -249,7 +256,7 @@ fbq('track','ViewContent',{content_name:'Combo Granja Completa',content_category
         <h1>De la pollita de un día a la <b>gallina en postura</b></h1>
         <p class="lead">Los 2 cursos online con los que manejamos nuestra granja: <b>Cría y Levante</b> (semanas 1 a 16) y <b>De Novato a Experto</b> (de la semana 16 en adelante). Los ves desde el celular, a tu ritmo.</p>
         <div class="acciones">
-          <a class="btn btn-oro js-pago" data-oferta="combo" href="https://pay.hotmart.com/I104270666R?off=ovjoq7m4&amp;src=pagina">Quiero los 2 cursos <small>US$47</small></a>
+          <a class="btn btn-oro js-pago" data-oferta="combo" href="https://pay.hotmart.com/I104270666R?off=ovjoq7m4&amp;src=pagina">Quiero los 2 cursos <small class="js-precio">US$47</small></a>
           <a class="btn btn-borde" href="#cursos">Ver el temario</a>
         </div>
         <ul class="confianza">
@@ -410,19 +417,21 @@ fbq('track','ViewContent',{content_name:'Combo Granja Completa',content_category
             <li>Monitor de Levante RM en Excel</li>
             <li>Monitor de Postura RM en Excel</li>
             <li>Comunidad de alumnos en WhatsApp</li>
+            <li class="js-app" hidden>2 meses de la app RM Postura Pro de regalo (lanzamiento)</li>
             <li>Acceso de por vida, desde el celular o el computador</li>
           </ul>
         </div>
         <div class="pago">
           <span class="antes">Precio normal US$62,40</span>
-          <span class="monto">US$47</span>
-          <span class="cop">En Colombia, hoy: <b>$158.645</b><br>o 12 cuotas de <b>$13.220</b> con tarjeta de crédito</span>
+          <span class="regalo-app js-app" hidden>🎁 Solo del 26 al 31 de octubre: 2 meses de la app RM Postura Pro de regalo</span>
+          <span class="monto js-precio">US$47</span>
+          <span class="cop js-cop">En Colombia, hoy: <b>$158.645</b><br>o 12 cuotas de <b>$13.220</b> con tarjeta de crédito</span>
           <span class="medios">PSE · Nequi · tarjeta débito o crédito · efectivo. Fuera de Colombia pagas en tu moneda.</span>
           <a class="btn btn-oro js-pago" data-oferta="combo" href="https://pay.hotmart.com/I104270666R?off=ovjoq7m4&amp;src=pagina">Comprar el combo</a>
         </div>
       </div>
       <div class="alternativas">
-        <div class="alt"><b>Solo De Novato a Experto</b><span>US$29 con la oferta de la clase, solo hasta el domingo 25 de octubre (después US$39). Incluye el Monitor de Postura.</span><a class="js-pago" data-oferta="novato" href="https://pay.hotmart.com/C81867023P?off=jznkqfre&amp;src=pagina">Comprar solo este curso →</a></div>
+        <div class="alt"><b>Solo De Novato a Experto</b><span class="js-novato">US$29 con la oferta de la clase, solo hasta el domingo 25 de octubre (después US$39). Incluye el Monitor de Postura.</span><a class="js-pago" data-oferta="novato" href="https://pay.hotmart.com/C81867023P?off=jznkqfre&amp;src=pagina">Comprar solo este curso →</a></div>
         <div class="alt"><b>Solo Cría y Levante</b><span>US$39. Incluye el Monitor de Levante.</span><a class="js-pago" data-oferta="levante" href="https://pay.hotmart.com/A96044174J?off=bmoqerfd&amp;src=pagina">Comprar solo este curso →</a></div>
       </div>
     </div>
@@ -459,7 +468,7 @@ fbq('track','ViewContent',{content_name:'Combo Granja Completa',content_category
       <h2>Empieza hoy y maneja tu galpón con números</h2>
       <p class="lead">85 clases, 2 herramientas en Excel y 7 días de garantía.</p>
       <div class="acciones">
-        <a class="btn btn-oro js-pago" data-oferta="combo" href="https://pay.hotmart.com/I104270666R?off=ovjoq7m4&amp;src=pagina">Quiero los 2 cursos <small>US$47</small></a>
+        <a class="btn btn-oro js-pago" data-oferta="combo" href="https://pay.hotmart.com/I104270666R?off=ovjoq7m4&amp;src=pagina">Quiero los 2 cursos <small class="js-precio">US$47</small></a>
       </div>
       <p class="dudas">¿Dudas? Escríbenos por WhatsApp al <b>+57 322 952 1224</b> · <a href="https://wa.me/573229521224?text=Hola%2C%20tengo%20una%20duda%20sobre%20los%20cursos" target="_blank" rel="noopener">abrir WhatsApp</a></p>
     </div>
@@ -473,7 +482,7 @@ fbq('track','ViewContent',{content_name:'Combo Granja Completa',content_category
   </div>
 </footer>
 
-<div class="fijo"><a class="btn btn-oro js-pago" data-oferta="combo" href="https://pay.hotmart.com/I104270666R?off=ovjoq7m4&amp;src=pagina">Quiero los 2 cursos · US$47</a></div>
+<div class="fijo"><a class="btn btn-oro js-pago" data-oferta="combo" href="https://pay.hotmart.com/I104270666R?off=ovjoq7m4&amp;src=pagina">Quiero los 2 cursos · <span class="js-precio">US$47</span></a></div>
 
 <script>
 // Lleva el origen del visitante (por ejemplo ?src=yt-KMK8Y0UjpQw) hasta Hotmart para saber de dónde vienen las ventas
@@ -481,6 +490,21 @@ fbq('track','ViewContent',{content_name:'Combo Granja Completa',content_category
   var origen = '';
   try { origen = new URLSearchParams(location.search).get('src') || ''; } catch (e) {}
   var src = 'pagina' + (origen ? '-' + origen.replace(/[^\w-]/g, '').slice(0, 40) : '');
+  // Ofertas con fecha (hora de Colombia): combo a US$37 del 26 al 31 de octubre; Novato a US$29 hasta el 25
+  var hoy = '';
+  try { hoy = new Intl.DateTimeFormat('en-CA', { timeZone: 'America/Bogota' }).format(new Date()); } catch (e) {}
+  try { var f = new URLSearchParams(location.search).get('fecha'); if (f && /^\d{4}-\d{2}-\d{2}$/.test(f)) hoy = f; } catch (e) {}
+  var lanzamiento = hoy >= '2026-10-26' && hoy <= '2026-10-31';
+  if (lanzamiento) {
+    document.querySelectorAll('.js-app').forEach(function (el) { el.hidden = false; });
+    document.querySelectorAll('.js-precio').forEach(function (el) { el.textContent = 'US$37'; });
+    document.querySelectorAll('.js-cop').forEach(function (el) { el.innerHTML = 'En Colombia: unos <b>$125.000</b><br>o 12 cuotas de unos <b>$10.400</b> con tarjeta de crédito'; });
+    document.querySelectorAll('a.js-pago[data-oferta="combo"]').forEach(function (a) { a.href = a.href.replace('off=ovjoq7m4', 'off=u5ovuc5n'); });
+  }
+  if (hoy > '2026-10-25') {
+    document.querySelectorAll('.js-novato').forEach(function (el) { el.textContent = 'US$39. Incluye el Monitor de Postura.'; });
+    document.querySelectorAll('a.js-pago[data-oferta="novato"]').forEach(function (a) { a.href = a.href.replace('off=jznkqfre', 'off=carfj1js'); });
+  }
   document.querySelectorAll('a.js-pago').forEach(function (a) {
     try { var u = new URL(a.href); u.searchParams.set('src', src); a.href = u.toString(); } catch (e) {}
     a.addEventListener('click', function () {
