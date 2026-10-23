@@ -201,6 +201,7 @@ footer .envoltura { display: flex; flex-wrap: wrap; justify-content: space-betwe
 [hidden] { display: none !important; }
 .franja { background: var(--oro); color: #14110A; font-weight: 700; font-size: 14.5px; padding-block: 10px; }
 .franja a { font-weight: 800; }
+.franja-clase .js-pago { display: inline-block; margin-left: 6px; background: #14110A; color: var(--oro); border-radius: 10px; padding: 4px 12px; text-decoration: none; }
 .regalo-app { display: inline-block; background: rgba(252, 200, 8, .14); border: 1px solid var(--oro); color: var(--oro); border-radius: 12px; padding: 8px 12px; font-size: 13.5px; font-weight: 700; }
 
 /* Botón fijo en celular */
@@ -246,6 +247,7 @@ fbq('track','ViewContent',{content_name:'Combo Granja Completa',content_category
   </div>
 </header>
 
+<div class="franja franja-clase" id="franjaClase" hidden><div class="envoltura">🎁 <b>Oferta de la clase:</b> el curso <b>De Novato a Experto a US$29</b> (antes US$39), solo hasta el domingo 25 de octubre a las 11:59 p. m. <a class="js-pago" data-oferta="novato" href="https://pay.hotmart.com/C81867023P?off=jznkqfre&amp;src=pagina">Comprar a US$29</a> · <a href="#cursos">ver el temario</a></div></div>
 <div class="franja js-app" hidden><div class="envoltura">🎁 Lanzamiento de la app RM Postura: el combo a <b>US$37</b> con <b>2 meses de RM Postura Pro</b> de regalo, solo hasta el viernes 31 de octubre. <a href="#precio">Ver precio</a></div></div>
 
 <main id="inicio">
@@ -501,6 +503,9 @@ fbq('track','ViewContent',{content_name:'Combo Granja Completa',content_category
     document.querySelectorAll('.js-cop').forEach(function (el) { el.innerHTML = 'En Colombia: unos <b>$125.000</b><br>o 12 cuotas de unos <b>$10.400</b> con tarjeta de crédito'; });
     document.querySelectorAll('a.js-pago[data-oferta="combo"]').forEach(function (a) { a.href = a.href.replace('off=ovjoq7m4', 'off=u5ovuc5n'); });
   }
+  var ofertaParam = '';
+  try { ofertaParam = new URLSearchParams(location.search).get('oferta') || ''; } catch (e) {}
+  if (ofertaParam === 'novato' && hoy <= '2026-10-25') document.getElementById('franjaClase').hidden = false;
   if (hoy > '2026-10-25') {
     document.querySelectorAll('.js-novato').forEach(function (el) { el.textContent = 'US$39. Incluye el Monitor de Postura.'; });
     document.querySelectorAll('a.js-pago[data-oferta="novato"]').forEach(function (a) { a.href = a.href.replace('off=jznkqfre', 'off=carfj1js'); });
